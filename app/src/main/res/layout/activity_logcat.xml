@@ -18,39 +18,32 @@
         app:contentInsetStart="16dp"
         tools:showIn="@layout/activity_logcat"/>
 
-    <FrameLayout
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:dividerHeight="0dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="1dp"
+        android:scrollbarSize="0dp"
+        android:scrollbars="vertical"/>
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="@style/Widget.AppCompat.ProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:indeterminate="true"
-            android:visibility="gone"/>
+    <!--TODO: Change border width back to 0.5dp when design library is fixed-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_compat_margin"
+        app:elevation="6dp"
+        app:srcCompat="@drawable/ic_pause_white_24dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:dividerHeight="0dp"
-            android:paddingBottom="2dp"
-            android:paddingTop="1dp"
-            android:scrollbarSize="0dp"
-            android:scrollbars="vertical"/>
-
-        <!--TODO: Change border width back to 0.5dp when design library is fixed-->
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_compat_margin"
-            app:elevation="6dp"
-            app:srcCompat="@drawable/ic_pause_white_24dp" />
-
-    </FrameLayout>
 </LinearLayout>

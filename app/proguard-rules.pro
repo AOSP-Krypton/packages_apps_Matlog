@@ -18,10 +18,6 @@
 
 -keepattributes *Annotation*
 -keepattributes SourceFile,LineNumberTable
--keep class com.crashlytics.** { *; }
--keep class io.fabric.** { *; }
--dontwarn com.crashlytics.**
--dontwarn io.fabric.**
 
--keep class android.support.v7.widget.SearchView {*;}
+-keep class androidx.appcompat.widget.SearchView {*;}
 -keep class com.pluscubed.logcat.RecordingWidgetProvider {*;}
