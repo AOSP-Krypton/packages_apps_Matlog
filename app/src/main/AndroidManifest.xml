@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.omnirom.logcat"
-    android:versionCode="6"
-    android:versionName="1.1.1">
+    package="com.krypton.logcat"
+    android:versionCode="1"
+    android:versionName="1.0.0">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_LOGS"
@@ -27,7 +27,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name="com.pluscubed.logcat.ui.LogcatActivity"
+            android:name="com.krypton.logcat.ui.LogcatActivity"
             android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
@@ -36,7 +36,7 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="com.pluscubed.logcat.intents.LAUNCH" />
+                <action android:name="com.krypton.logcat.intents.LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -46,7 +46,7 @@
         </activity>
 
         <activity
-            android:name="com.pluscubed.logcat.ui.RecordLogDialogActivity"
+            android:name="com.krypton.logcat.ui.RecordLogDialogActivity"
             android:exported="true">
 
             <intent-filter>
@@ -54,11 +54,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.pluscubed.logcat.ui.SettingsActivity" />
+        <activity android:name="com.krypton.logcat.ui.SettingsActivity" />
 
-        <service android:name="com.pluscubed.logcat.LogcatRecordingService" />
+        <service android:name="com.krypton.logcat.LogcatRecordingService" />
 
-        <service android:name="com.pluscubed.logcat.CrazyLoggerService" />
+        <service android:name="com.krypton.logcat.CrazyLoggerService" />
 
         <!-- QS Tile -->
         <service
@@ -74,7 +74,7 @@
         </service>
 
         <receiver
-            android:name="com.pluscubed.logcat.RecordingWidgetProvider"
+            android:name="com.krypton.logcat.RecordingWidgetProvider"
             android:icon="@mipmap/ic_launcher"
             android:exported="true">
             <intent-filter>

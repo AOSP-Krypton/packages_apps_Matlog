@@ -4,21 +4,15 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "org.omnirom.logcat"
+        applicationId "com.krypton.logcat"
         minSdkVersion 27
         targetSdkVersion 31
-        versionName '1.1.1'
-        versionCode 6
     }
 
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            applicationIdSuffix '.debug'
-            versionNameSuffix '-DEBUG'
         }
     }
 
