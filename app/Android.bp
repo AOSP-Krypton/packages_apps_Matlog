@@ -30,6 +30,7 @@ android_app {
     static_libs: [
         "androidx.annotation_annotation",
         "androidx.appcompat_appcompat",
+        "androidx-constraintlayout_constraintlayout",
         "androidx.core_core",
         "androidx.preference_preference",
         "androidx.recyclerview_recyclerview",
